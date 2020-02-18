@@ -13,13 +13,13 @@ import { AuthService, User } from './../../../auth/shared/services/auth/auth.ser
   styleUrls: ['app.component.scss'],
   template: `
     <div>
-    <app-header
-      [user]="user$ | async"
-      (logout)="onLogout()">
-    </app-header>
-    <app-nav
-      *ngIf="(user$ | async)?.authenticated"> <!-- the app nav will only be rendered if we are logged in -->
-    </app-nav>
+      <app-header
+        [user]="user$ | async"
+        (logout)="onLogout()">
+      </app-header>
+      <app-nav
+        *ngIf="(user$ | async)?.authenticated"> <!-- the app nav will only be rendered if we are logged in -->
+      </app-nav>
       <div class="wrapper">
         <router-outlet></router-outlet>
       </div>
